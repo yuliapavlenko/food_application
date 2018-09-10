@@ -4,10 +4,11 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.validation.constraints.NotBlank;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Embeddable
-public class Person {
+public class Person implements Serializable {
     @NotBlank
     @Column(name = "user_first_name")
     private String firstName;

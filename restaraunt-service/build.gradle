@@ -34,4 +34,5 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
 	compile('org.springframework:spring-jdbc')
 	compile('org.springframework.boot:spring-boot-starter')
+	compile 'org.modelmapper:modelmapper:0.7.4'
 }
