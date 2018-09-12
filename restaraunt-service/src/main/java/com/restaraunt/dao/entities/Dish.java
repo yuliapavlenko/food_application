@@ -50,10 +50,28 @@ public class Dish implements Serializable {
 
     @Column(name = "dish_rating")
     private double rating;
+    
+    @Column(name = "dish_photo")
+    private String photo;
 
     @OneToMany(mappedBy = "dish")
     private Set<Order> orders = new HashSet<>();
 
     @OneToMany(mappedBy = "user")
     private Set<Comment> comments = new HashSet<>();
+    
+    public String toString() {
+        return "Dish{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", composition='" + composition + '\'' +
+                ", category=" + category +
+                ", amount=" + amount +
+                ", rating=" + rating +
+                ", photo=" + photo +
+                ", orders=" + orders +
+                ", comments=" + comments +
+                '}';
+    }
 }

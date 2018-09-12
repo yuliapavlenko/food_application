@@ -5,7 +5,8 @@ CREATE TABLE dishes(
   dish_composition VARCHAR(255) NOT NULL,
   dish_category VARCHAR(255) NOT NULL,
   dish_amount DOUBLE,
-  dish_rating DOUBLE
+  dish_rating DOUBLE,
+  dish_photo VARCHAR(20000)
 );
 
 CREATE TABLE users(
@@ -15,7 +16,8 @@ CREATE TABLE users(
   user_role VARCHAR(255) NOT NULL,
   user_first_name VARCHAR(255) NOT NULL,
   user_last_name VARCHAR(255) NOT NULL,
-  user_date_of_birthday TIMESTAMP
+  user_date_of_birthday TIMESTAMP,
+  user_photo VARCHAR(20000)
 );
 
 CREATE TABLE orders(

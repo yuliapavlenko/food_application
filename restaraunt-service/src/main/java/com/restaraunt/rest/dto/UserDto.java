@@ -38,6 +38,8 @@ public class UserDto implements Serializable {
     private String lastName;
 
     private Timestamp dateOfBirthday;
+    
+    private String photo;
 
     private Set<OrderDto> orders;
 

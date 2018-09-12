@@ -49,4 +49,16 @@ public class User implements Serializable {
 
     @OneToMany(mappedBy = "user")
     private Set<Comment> comments = new HashSet<>();
+    
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", userRole=" + userRole +
+                ", person=" + person +
+                ", orders=" + orders +
+                ", comments=" + comments +
+                '}';
+    }
 }

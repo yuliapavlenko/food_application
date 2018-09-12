@@ -19,4 +19,16 @@ public class Person implements Serializable {
 
     @Column(name = "user_date_of_birthday")
     private Timestamp dateOfBirthday;
+    
+    @Column(name = "user_photo")
+    private String photo;
+    
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dateOfBirthday=" + dateOfBirthday + '\'' +
+                ", photo=" +
+                '}';
+    }
 }

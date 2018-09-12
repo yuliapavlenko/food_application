@@ -35,6 +35,8 @@ public class DishDto implements Serializable{
     private double amount;
 
     private double rating;
+    
+    private String photo;
 
     private Set<OrderDto> orders;
 

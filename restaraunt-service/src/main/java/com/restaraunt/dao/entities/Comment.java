@@ -51,4 +51,15 @@ public class Comment implements Serializable {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", dateOfOrder=" + dateOfOrder +
+                ", text='" + text + '\'' +
+                ", rating=" + rating +
+                ", dish=" + dish +
+                ", user=" + user +
+                '}';
+    }
 }

@@ -54,4 +54,15 @@ public class Order implements Serializable {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    
+    public java.lang.String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", dateOfOrder=" + dateOfOrder +
+                ", cooker='" + cooker + '\'' +
+                ", status=" + status +
+                ", dish=" + dish +
+                ", user=" + user +
+                '}';
+    }
 }
