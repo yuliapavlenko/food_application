@@ -14,6 +14,10 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+
 
 group = 'com.restaraunt'
 version = '0.0.1-SNAPSHOT'
@@ -36,3 +40,52 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile 'org.modelmapper:modelmapper:0.7.4'
 }
+
+checkstyle {
+	toolVersion = '7.4'
+	checkstyleTest.enabled = false
+	config = rootProject.resources.text.fromFile('/checkstyle/rules.xml')
+}
+
+pmd {
+	ignoreFailures = true
+	pmdTest.enabled=false
+	ruleSets = [
+			'java-basic',
+			'java-braces',
+			'java-clone',
+			'java-codesize',
+			'java-comments',
+			'java-controversial',
+			'java-coupling',
+			'java-design',
+			'java-empty',
+			'java-finalizers',
+			'java-imports',
+			'java-optimizations',
+			'java-strictexception',
+			'java-strings',
+			'java-typeresolution',
+			'java-unnecessary',
+			'java-unusedcode'
+	]
+}
+
+tasks.withType(Checkstyle) {
+	reports {
+		xml{
+			destination "${rootProject.buildDir}/reports/checkstyle/checkstyle-result.xml"
+		}
+	}
+}
+
+tasks.withType(Pmd){
+	reports{
+		xml.enabled=true
+		xml{
+			destination "${rootProject.buildDir}/reports/pmd/pmd-result.xml"
+		}
+		html.enabled=true
+	}
+}
+
