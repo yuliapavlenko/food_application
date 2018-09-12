@@ -39,7 +39,7 @@ public class DishService {
         
     }
     
-    public Optional<DishDto> getDishById(Long id) {
+    public Optional<DishDto> findDishById(Long id) {
         Optional<Dish> dish = dishRepository.findById(id);
         
         if (dish.isPresent()) {
