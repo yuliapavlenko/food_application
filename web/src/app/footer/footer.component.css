@@ -1,0 +1,33 @@
+a {
+  text-decoration: none;
+  color: gray
+}
+
+table {
+  margin-top: 1%;
+  width: 20%;
+  margin-left: 39%;
+  text-align: center;
+}
+
+div.footer{
+  background-color:#343a40;
+  bottom: 0;
+  position: absolute;
+  height: 23%;
+  width: 100%;
+}
+.fa-facebook {
+  color: gray;
+}
+.fa-youtube {
+  color: gray;
+}
+.fa-instagram {
+  color: gray;
+}
+.fa {
+  background: #343a40;
+  font-size: 25px;
+  width: 50px;
+}
